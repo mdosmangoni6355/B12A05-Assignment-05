@@ -6,8 +6,8 @@ getElementById()
 ইউজ করার নিয়ম: document.getElementById('myId')
 
 getElementsByClassName()
-কাজ: একই ক্লাস নামを持つ সমস্ত এলিমেন্ট সিলেক্ট করে
-রিটার্ন ভ্যালু: একটি Live HTMLCollection (এরে-এর মতো কিন্তু完全別) রিটার্ন করে
+কাজ: একই ক্লাস নাম সমস্ত এলিমেন্ট সিলেক্ট করে
+রিটার্ন ভ্যালু: একটি Live HTMLCollection (এরে-এর মতো কিন্ত রিটার্ন করে
 ইউজ করার নিয়ম: document.getElementsByClassName('myClass')
 
 querySelector() / querySelectorAll()
@@ -25,6 +25,7 @@ getElementById শুধুমাত্র ID দিয়ে সিলেক্
 getElementsByClassName শুধুমাত্র ক্লাস নাম দিয়ে সিলেক্ট করে
 querySelector/querySelectorAll যে কোনো CSS সিলেক্টর ব্যবহার করতে পারে (আইডি, ক্লাস, ট্যাগ, কম্বিনেশন ইত্যাদি)
 
+*********************************************************************************************
 
 Question No-2: How do you create and insert a new element into the DOM?
 Answer:
@@ -45,6 +46,7 @@ insertAdjacentElement(): আরো নিখুতভাবে নির্দ�
 parentElement.insertAdjacentElement('beforeend', newElement);
 // পজিশন: 'beforebegin', 'afterbegin', 'beforeend', 'afterend'
 
+*********************************************************************************************
 
 Question No-3: What is Event Bubbling and how does it work?
 Answer:
@@ -61,6 +63,8 @@ Answer:
 element.addEventListener('click', function(event) {
   event.stopPropagation(); // ইভেন্ট বাবলিং বন্ধ করে
 });
+
+*********************************************************************************************
 
 Question No-4: What is Event Delegation in JavaScript? Why is it useful?
 Answer:
@@ -79,6 +83,7 @@ parentElement.addEventListener('click', function(event) {
   }
 });
 
+*********************************************************************************************
 
 Question No-5: What is the difference between preventDefault() and stopPropagation() methods?
 Answer:
