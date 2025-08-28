@@ -29,16 +29,16 @@
 </head>
 <body class="font-madurai">
     <header>
-        <section id="navbar" class="flex justify-between min-h-[50px] max-w-[1400px] mx-auto py-6">
-            <div class="flex items-center">
+        <section id="navbar" class="flex max-sm:flex-col max-sm:gap-4 justify-between min-h-[50px] max-w-[1400px] mx-auto py-6">
+            <div id="nav-logo" class="flex max-sm:justify-center items-center">
                 <div>
-                    <img class="w-12 h-12" src="./assets/logo.png" alt="logo">
+                    <img class="w-12 h-12 max-sm:w-20 max-sm:h-20" src="./assets/logo.png" alt="logo">
                 </div>
-                <div class="ml-2">
-                    <h2 class="text-xl text-[#006747] font-black">Emergency <br> Service</h2>
+                <div class="ml-2 max-sm:ml-4">
+                    <h2 class="text-xl max-sm:text-3xl text-[#006747] font-black">Emergency <br> Service</h2>
                 </div>
             </div>
-            <div class="flex gap-4 items-center justify-between">
+            <div class="flex gap-4 items-center justify-between max-sm:justify-evenly">
                 <div class="flex justify-center items-center gap-4 rounded-[50px] w-36 h-12 bg-[#41FF6B1A]">
                     <span class="font-bold text-xl">0</span>
                     <img class="w-8 h-8" src="./assets/heart.png" alt="heart-icon">
@@ -52,15 +52,15 @@
                 </div>
             </div>
         </section>
-        <section id="banner" class="w-full flex flex-col items-center gap-3 py-7 bg-linear-to-r from-[#013223] via-[#006747] to-[#013223]">
-            <img class="w-28 h-28" src="./assets/logo-dark.png" alt="banner-logo">
-            <h1 class="text-white text-3xl font-semibold">জরুরি সেবা ডিরেক্টরি</h1>
-            <p class="text-white font-semibold">Government Emergency Services at Your Fingertip – A Project by Government of the People’s Republic of Bangladesh</p>
+        <section id="banner" class="w-full flex flex-col items-center gap-3 py-7 max-sm:p-4 bg-linear-to-r from-[#013223] via-[#006747] to-[#013223]">
+            <img class="w-28 h-28 max-sm:w-20 max-sm:h-20" src="./assets/logo-dark.png" alt="banner-logo">
+            <h1 class="text-white text-3xl max-sm:text-xl font-semibold">জরুরি সেবা ডিরেক্টরি</h1>
+            <p class="text-white font-semibold max-sm:font-normal">Government Emergency Services at Your Fingertip – A Project by Government of the People’s Republic of Bangladesh</p>
         </section>
     </header>
-    <main class="bg-[#F5FFF6] p-12 flex gap-4">
-        <section class="flex flex-wrap gap-7 w-3/4">
-            <div class="card bg-base-100 gap-5 p-6 w-[330px] shadow-md">
+    <main class="bg-[#F5FFF6] p-12 flex max-sm:flex-col gap-4">
+        <section class="flex flex-wrap gap-7 w-3/4 max-sm:w-full">
+            <div class="card bg-base-100 gap-5 p-6 w-[330px] max-sm:w-full shadow-md">
                 <div class="flex justify-between">
                     <div class="bg-[#FFE3E2] p-2 rounded-xl">
                         <img class="w-5 h-5" src="./assets/emergency.png" alt="Emergency-Icon">
@@ -86,7 +86,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card bg-base-100 gap-5 p-6 w-[330px] shadow-md">
+            <div class="card bg-base-100 gap-5 p-6 w-[330px] max-sm:w-full shadow-md">
                 <div class="flex justify-between">
                     <div class="bg-[#DFEFFF] p-2 rounded-xl">
                         <img class="w-5 h-5" src="./assets/police.png" alt="Police-Icon">
@@ -112,7 +112,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card bg-base-100 gap-5 p-6 w-[330px] shadow-md">
+            <div class="card bg-base-100 gap-5 p-6 w-[330px] max-sm:w-full shadow-md">
                 <div class="flex justify-between">
                     <div class="bg-[#FFE3E2] p-2 rounded-xl">
                         <img class="w-5 h-5" src="./assets/fire-service.png" alt="fire-service-icon">
@@ -138,7 +138,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card bg-base-100 gap-5 p-6 w-[330px] shadow-md">
+            <div class="card bg-base-100 gap-5 p-6 w-[330px] max-sm:w-full shadow-md">
                 <div class="flex justify-between">
                     <div class="bg-[#FFE3E2] p-2 rounded-xl">
                         <img class="w-5 h-5" src="./assets/ambulance.png" alt="Emergency-Icon">
@@ -164,7 +164,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card bg-base-100 gap-5 p-6 w-[330px] shadow-md">
+            <div class="card bg-base-100 gap-5 p-6 w-[330px] max-sm:w-full shadow-md">
                 <div class="flex justify-between">
                     <div class="bg-[#FFE3E2] p-2 rounded-xl">
                         <img class="w-5 h-5" src="./assets/emergency.png" alt="Emergency-Icon">
@@ -190,7 +190,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card bg-base-100 gap-5 p-6 w-[330px] shadow-md">
+            <div class="card bg-base-100 gap-5 p-6 w-[330px] max-sm:w-full shadow-md">
                 <div class="flex justify-between">
                     <div class="bg-[#FFE3E2] p-2 rounded-xl">
                         <img class="w-5 h-5" src="./assets/emergency.png" alt="Emergency-Icon">
@@ -216,7 +216,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card bg-base-100 gap-5 p-6 w-[330px] shadow-md">
+            <div class="card bg-base-100 gap-5 p-6 w-[330px] max-sm:w-full shadow-md">
                 <div class="flex justify-between">
                     <div class="bg-[#FFE3E2] p-2 rounded-xl">
                         <img class="w-5 h-5" src="./assets/emergency.png" alt="Emergency-Icon">
@@ -242,7 +242,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card bg-base-100 gap-5 p-6 w-[330px] shadow-md">
+            <div class="card bg-base-100 gap-5 p-6 w-[330px] max-sm:w-full shadow-md">
                 <div class="flex justify-between">
                     <div class="bg-[#FFE3E2] p-2 rounded-xl">
                         <img class="w-5 h-5" src="./assets/brac.png" alt="Brac-Icon">
@@ -268,7 +268,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card bg-base-100 gap-5 p-6 w-[330px] shadow-md">
+            <div class="card bg-base-100 gap-5 p-6 w-[330px] max-sm:w-full shadow-md">
                 <div class="flex justify-between">
                     <div class="bg-[#FFE3E2] p-2 rounded-xl">
                         <img class="w-5 h-5" src="./assets/Bangladesh-Railway.png" alt="Bangladesh-Railway-icon">
@@ -295,7 +295,7 @@
                 </div>
             </div>
         </section>
-        <section class="w-1/4 bg-[#fff] flex flex-col gap-5 p-5 px-7 rounded-xl shadow-md">
+        <section class="w-1/4 max-sm:w-full bg-[#fff] flex flex-col gap-5 p-5 px-7 rounded-xl shadow-md">
             <div class="flex justify-between items-center">
                 <div>
                     <p class="font-medium text-xl"><i class="fa-regular fa-clock text-gray-400"></i> Call History</p>
