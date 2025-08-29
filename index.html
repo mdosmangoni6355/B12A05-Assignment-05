@@ -1,333 +1,592 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Emergency Service</title>
-
     <!-- Tailwind CSS CDN -->
-        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    <!-- DaisyUi CDN -->
-        <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
-     <!-- FontAwesome CDN -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <!-- FontAwesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- Google Fonts CDN -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
-    <style>
-        .font-madurai{
-            font-family: "Hind Madurai", sans-serif;
-        }
-    </style>
+    <link rel="stylesheet" href="./style.css" />
 
-</head>
-<body class="font-madurai">
+  </head>
+  <body class="font-madurai">
     <header>
-        <section id="navbar" class="flex max-sm:flex-col max-sm:gap-4 justify-between min-h-[50px] max-w-[1400px] mx-auto py-6">
-            <div id="nav-logo" class="flex max-sm:justify-center items-center">
-                <div>
-                    <img class="w-12 h-12 max-sm:w-20 max-sm:h-20" src="./assets/logo.png" alt="logo">
-                </div>
-                <div class="ml-2 max-sm:ml-4">
-                    <h2 class="text-xl max-sm:text-3xl text-[#006747] font-black">Emergency <br> Service</h2>
-                </div>
-            </div>
-            <div class="flex gap-4 items-center justify-between max-sm:justify-evenly">
-                <div class="flex justify-center items-center gap-4 rounded-[50px] w-36 h-12 bg-[#41FF6B1A]">
-                    <span class="font-bold text-xl">0</span>
-                    <img class="w-8 h-8" src="./assets/heart.png" alt="heart-icon">
-                </div>
-                <div class="flex justify-center items-center gap-4 rounded-[50px] w-36 h-12 bg-[#41FF6B1A]">
-                    <span class="font-bold text-xl">100</span>
-                    <img class="w-8 h-8" src="./assets/coin.png" alt="heart-icon">
-                </div>
-                <div class="flex justify-center items-center gap-4 rounded-[50px] w-40 h-12 bg-[#00A63E]">
-                    <p class="font-normal text-xl text-white"><span>0 </span> Copy</p>
-                </div>
-            </div>
-        </section>
-        <section id="banner" class="w-full flex flex-col items-center gap-3 py-7 max-sm:p-4 bg-linear-to-r from-[#013223] via-[#006747] to-[#013223]">
-            <img class="w-28 h-28 max-sm:w-20 max-sm:h-20" src="./assets/logo-dark.png" alt="banner-logo">
-            <h1 class="text-white text-3xl max-sm:text-xl font-semibold">জরুরি সেবা ডিরেক্টরি</h1>
-            <p class="text-white font-semibold max-sm:font-normal">Government Emergency Services at Your Fingertip – A Project by Government of the People’s Republic of Bangladesh</p>
-        </section>
+      <section
+        id="navbar"
+        class="flex max-sm:flex-col max-sm:gap-4 justify-between min-h-[50px] max-w-[1400px] mx-auto py-6"
+      >
+        <div id="nav-logo" class="flex max-sm:justify-center items-center">
+          <div>
+            <img
+              class="w-12 h-12 max-sm:w-20 max-sm:h-20"
+              src="./assets/logo.png"
+              alt="logo"
+            />
+          </div>
+          <div class="ml-2 max-sm:ml-4">
+            <h2 class="text-xl max-sm:text-3xl text-[#006747] font-black">
+              Emergency <br />
+              Service
+            </h2>
+          </div>
+        </div>
+        <div
+          class="flex gap-4 items-center justify-between max-sm:justify-evenly"
+        >
+          <div
+            class="flex justify-center items-center gap-4 rounded-[50px] w-36 h-12 bg-[#41FF6B1A]"
+          >
+            <span id="heart-count-field" class="font-bold text-xl">0</span>
+            <img class="w-8 h-8" src="./assets/heart.png" alt="heart-icon" />
+          </div>
+          <div
+            class="flex justify-center items-center gap-4 rounded-[50px] w-36 h-12 bg-[#41FF6B1A]"
+          >
+            <span id="coin-count" class="font-bold text-xl">100</span>
+            <img class="w-8 h-8" src="./assets/coin.png" alt="heart-icon" />
+          </div>
+          <div
+            class="flex justify-center items-center gap-4 rounded-[50px] w-40 h-12 bg-[#00A63E]"
+          >
+            <p class="font-normal text-xl text-white">
+              <span id="copy-count-text">0</span> Copy
+            </p>
+          </div>
+        </div>
+      </section>
+      <section
+        id="banner"
+        class="w-full flex flex-col items-center gap-3 py-7 max-sm:p-4 bg-linear-to-r"
+      >
+        <img
+          class="w-28 h-28 max-sm:w-20 max-sm:h-20"
+          src="./assets/logo-dark.png"
+          alt="banner-logo"
+        />
+        <h1 class="text-white text-3xl max-sm:text-xl font-semibold">
+          জরুরি সেবা ডিরেক্টরি
+        </h1>
+        <p class="text-white font-semibold max-sm:font-normal">
+          Government Emergency Services at Your Fingertip – A Project by
+          Government of the People’s Republic of Bangladesh
+        </p>
+      </section>
     </header>
     <main class="bg-[#F5FFF6] p-12 flex max-sm:flex-col gap-4">
-        <section class="flex flex-wrap gap-7 w-3/4 max-sm:w-full">
-            <div class="card bg-base-100 gap-5 p-6 w-[330px] max-sm:w-full shadow-md">
-                <div class="flex justify-between">
-                    <div class="bg-[#FFE3E2] p-2 rounded-xl">
-                        <img class="w-5 h-5" src="./assets/emergency.png" alt="Emergency-Icon">
-                    </div>
-                    <div>
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="font-bold text-xl">জাতীয় জরুরি সেবা</h3>
-                    <p class="text-[#5C5C5C]">National Emergency</p>
-                </div>
-                <div>
-                    <h3 class="font-bold text-2xl">999</h3>
-                    <div class="bg-[#F2F2F2] w-24 h-9 flex items-center justify-center rounded-2xl">
-                        <p class="text-[#5C5C5C]">সার্বজনীন</p>
-                    </div>
-                </div>
-                <div class="card-body justify-between p-0">
-                    <div class="card-actions">
-                        <button class="btn flex-1 rounded-lg"><i class="fa-regular fa-paste"></i> Copy</button>
-                        <button class="btn flex-1 rounded-lg bg-[#00A63E] text-white"><i class="fa-solid fa-phone"></i> Buy Now</button>
-                    </div>
-                </div>
+      <section class="flex flex-wrap gap-7 w-3/4 max-sm:w-full">
+        <!-- Card 1: Jatiya Joruri Seba -->
+        <div
+          class="card bg-white gap-5 p-6 w-[330px] max-sm:w-full shadow-md rounded-xl"
+        >
+          <div class="flex justify-between">
+            <div class="bg-[#FFE3E2] p-2 rounded-xl">
+              <img
+                class="w-5 h-5"
+                src="./assets/emergency.png"
+                alt="Emergency-Icon"
+              />
             </div>
-            <div class="card bg-base-100 gap-5 p-6 w-[330px] max-sm:w-full shadow-md">
-                <div class="flex justify-between">
-                    <div class="bg-[#DFEFFF] p-2 rounded-xl">
-                        <img class="w-5 h-5" src="./assets/police.png" alt="Police-Icon">
-                    </div>
-                    <div>
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="font-bold text-xl">পুলিশ</h3>
-                    <p class="text-[#5C5C5C]">Police</p>
-                </div>
-                <div>
-                    <h3 class="font-bold text-2xl">999</h3>
-                    <div class="bg-[#F2F2F2] w-24 h-9 flex items-center justify-center rounded-2xl">
-                        <p class="text-[#5C5C5C]">পুলিশ</p>
-                    </div>
-                </div>
-                <div class="card-body justify-between p-0">
-                    <div class="card-actions">
-                        <button class="btn flex-1 rounded-lg"><i class="fa-regular fa-paste"></i> Copy</button>
-                        <button class="btn flex-1 rounded-lg bg-[#00A63E] text-white"><i class="fa-solid fa-phone"></i> Buy Now</button>
-                    </div>
-                </div>
+            <div>
+              <i
+                class="heart-btn fa-regular fa-heart text-gray-400 cursor-pointer transition-colors duration-200 hover:text-red-500"
+                data-service-id="999-emergency"
+              ></i>
             </div>
-            <div class="card bg-base-100 gap-5 p-6 w-[330px] max-sm:w-full shadow-md">
-                <div class="flex justify-between">
-                    <div class="bg-[#FFE3E2] p-2 rounded-xl">
-                        <img class="w-5 h-5" src="./assets/fire-service.png" alt="fire-service-icon">
-                    </div>
-                    <div>
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="font-bold text-xl">ফায়ার সার্ভিস</h3>
-                    <p class="text-[#5C5C5C]">Fire Service</p>
-                </div>
-                <div>
-                    <h3 class="font-bold text-2xl">999</h3>
-                    <div class="bg-[#F2F2F2] w-24 h-9 flex items-center justify-center rounded-2xl">
-                        <p class="text-[#5C5C5C]">ফায়ার</p>
-                    </div>
-                </div>
-                <div class="card-body justify-between p-0">
-                    <div class="card-actions">
-                        <button class="btn flex-1 rounded-lg"><i class="fa-regular fa-paste"></i> Copy</button>
-                        <button class="btn flex-1 rounded-lg bg-[#00A63E] text-white"><i class="fa-solid fa-phone"></i> Buy Now</button>
-                    </div>
-                </div>
+          </div>
+          <div>
+            <h3 class="font-bold text-xl" data-service-name="জাতীয় জরুরি সেবা">
+              জাতীয় জরুরি সেবা
+            </h3>
+            <p class="text-[#5C5C5C]">National Emergency</p>
+          </div>
+          <div>
+            <h3 class="font-bold text-2xl" data-service-number="999">999</h3>
+            <div
+              class="bg-[#F2F2F2] w-24 h-9 flex items-center justify-center rounded-2xl"
+            >
+              <p class="text-[#5C5C5C]">সার্বজনীন</p>
             </div>
-            <div class="card bg-base-100 gap-5 p-6 w-[330px] max-sm:w-full shadow-md">
-                <div class="flex justify-between">
-                    <div class="bg-[#FFE3E2] p-2 rounded-xl">
-                        <img class="w-5 h-5" src="./assets/ambulance.png" alt="Emergency-Icon">
-                    </div>
-                    <div>
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="font-bold text-xl">অ্যাম্বুলেন্স</h3>
-                    <p class="text-[#5C5C5C]">Ambulance</p>
-                </div>
-                <div>
-                    <h3 class="font-bold text-2xl">1994-999999</h3>
-                    <div class="bg-[#F2F2F2] w-24 h-9 flex items-center justify-center rounded-2xl">
-                        <p class="text-[#5C5C5C]">স্বাস্থ্য</p>
-                    </div>
-                </div>
-                <div class="card-body justify-between p-0">
-                    <div class="card-actions">
-                        <button class="btn flex-1 rounded-lg"><i class="fa-regular fa-paste"></i> Copy</button>
-                        <button class="btn flex-1 rounded-lg bg-[#00A63E] text-white"><i class="fa-solid fa-phone"></i> Buy Now</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card bg-base-100 gap-5 p-6 w-[330px] max-sm:w-full shadow-md">
-                <div class="flex justify-between">
-                    <div class="bg-[#FFE3E2] p-2 rounded-xl">
-                        <img class="w-5 h-5" src="./assets/emergency.png" alt="Emergency-Icon">
-                    </div>
-                    <div>
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="font-bold text-xl">নারী ও শিশু সহায়তা</h3>
-                    <p class="text-[#5C5C5C]">Women & Child Helpline</p>
-                </div>
-                <div>
-                    <h3 class="font-bold text-2xl">109</h3>
-                    <div class="bg-[#F2F2F2] w-24 h-9 flex items-center justify-center rounded-2xl">
-                        <p class="text-[#5C5C5C]">সহায়তা</p>
-                    </div>
-                </div>
-                <div class="card-body justify-between p-0">
-                    <div class="card-actions">
-                        <button class="btn flex-1 rounded-lg"><i class="fa-regular fa-paste"></i> Copy</button>
-                        <button class="btn flex-1 rounded-lg bg-[#00A63E] text-white"><i class="fa-solid fa-phone"></i> Buy Now</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card bg-base-100 gap-5 p-6 w-[330px] max-sm:w-full shadow-md">
-                <div class="flex justify-between">
-                    <div class="bg-[#FFE3E2] p-2 rounded-xl">
-                        <img class="w-5 h-5" src="./assets/emergency.png" alt="Emergency-Icon">
-                    </div>
-                    <div>
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="font-bold text-xl">দুদক</h3>
-                    <p class="text-[#5C5C5C]">Anti-Corruption</p>
-                </div>
-                <div>
-                    <h3 class="font-bold text-2xl">106</h3>
-                    <div class="bg-[#F2F2F2] w-24 h-9 flex items-center justify-center rounded-2xl">
-                        <p class="text-[#5C5C5C]">সরকারি</p>
-                    </div>
-                </div>
-                <div class="card-body justify-between p-0">
-                    <div class="card-actions">
-                        <button class="btn flex-1 rounded-lg"><i class="fa-regular fa-paste"></i> Copy</button>
-                        <button class="btn flex-1 rounded-lg bg-[#00A63E] text-white"><i class="fa-solid fa-phone"></i> Buy Now</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card bg-base-100 gap-5 p-6 w-[330px] max-sm:w-full shadow-md">
-                <div class="flex justify-between">
-                    <div class="bg-[#FFE3E2] p-2 rounded-xl">
-                        <img class="w-5 h-5" src="./assets/emergency.png" alt="Emergency-Icon">
-                    </div>
-                    <div>
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="font-bold text-xl">বিদ্যুৎ বিভ্রাট</h3>
-                    <p class="text-[#5C5C5C]">Electricity Outage</p>
-                </div>
-                <div>
-                    <h3 class="font-bold text-2xl">16216</h3>
-                    <div class="bg-[#F2F2F2] w-24 h-9 flex items-center justify-center rounded-2xl">
-                        <p class="text-[#5C5C5C]">বিদ্যুৎ</p>
-                    </div>
-                </div>
-                <div class="card-body justify-between p-0">
-                    <div class="card-actions">
-                        <button class="btn flex-1 rounded-lg"><i class="fa-regular fa-paste"></i> Copy</button>
-                        <button class="btn flex-1 rounded-lg bg-[#00A63E] text-white"><i class="fa-solid fa-phone"></i> Buy Now</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card bg-base-100 gap-5 p-6 w-[330px] max-sm:w-full shadow-md">
-                <div class="flex justify-between">
-                    <div class="bg-[#FFE3E2] p-2 rounded-xl">
-                        <img class="w-5 h-5" src="./assets/brac.png" alt="Brac-Icon">
-                    </div>
-                    <div>
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="font-bold text-xl">ব্র্যাক</h3>
-                    <p class="text-[#5C5C5C]">Brac</p>
-                </div>
-                <div>
-                    <h3 class="font-bold text-2xl">16445</h3>
-                    <div class="bg-[#F2F2F2] w-24 h-9 flex items-center justify-center rounded-2xl">
-                        <p class="text-[#5C5C5C]">এনজিও</p>
-                    </div>
-                </div>
-                <div class="card-body justify-between p-0">
-                    <div class="card-actions">
-                        <button class="btn flex-1 rounded-lg"><i class="fa-regular fa-paste"></i> Copy</button>
-                        <button class="btn flex-1 rounded-lg bg-[#00A63E] text-white"><i class="fa-solid fa-phone"></i> Buy Now</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card bg-base-100 gap-5 p-6 w-[330px] max-sm:w-full shadow-md">
-                <div class="flex justify-between">
-                    <div class="bg-[#FFE3E2] p-2 rounded-xl">
-                        <img class="w-5 h-5" src="./assets/Bangladesh-Railway.png" alt="Bangladesh-Railway-icon">
-                    </div>
-                    <div>
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="font-bold text-xl">বাংলাদেশ রেলওয়ে</h3>
-                    <p class="text-[#5C5C5C]">Bangladesh Railway</p>
-                </div>
-                <div>
-                    <h3 class="font-bold text-2xl">163</h3>
-                    <div class="bg-[#F2F2F2] w-24 h-9 flex items-center justify-center rounded-2xl">
-                        <p class="text-[#5C5C5C]">পরিবহন</p>
-                    </div>
-                </div>
-                <div class="card-body justify-between p-0">
-                    <div class="card-actions">
-                        <button class="btn flex-1 rounded-lg"><i class="fa-regular fa-paste"></i> Copy</button>
-                        <button class="btn flex-1 rounded-lg bg-[#00A63E] text-white"><i class="fa-solid fa-phone"></i> Buy Now</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="w-1/4 max-sm:w-full bg-[#fff] flex flex-col gap-5 p-5 px-7 rounded-xl shadow-md">
-            <div class="flex justify-between items-center">
-                <div>
-                    <p class="font-medium text-xl"><i class="fa-regular fa-clock text-gray-400"></i> Call History</p>
-                </div>
-                <div class="flex justify-center items-center gap-4 rounded-[50px] w-28 h-12 bg-[#00A63E]">
-                    <p class="font-normal text-lg text-white">Clear</p>
-                </div>
-            </div>
-            <div class="flex flex-col gap-2">
-                <div class="flex justify-between items-center p-4 rounded-lg bg-[#FAFAFA]">
-                    <div>
-                        <p>জাতীয় জরুরি সেবা</p>
-                        <p class="text-[#5C5C5C]">999</p>
-                    </div>
-                    <div>
-                        <p>11:36:58 AM</p>
-                    </div>
-                </div>
-                <div class="flex justify-between items-center p-4 rounded-lg bg-[#FAFAFA]">
-                    <div>
-                        <p>জাতীয় জরুরি সেবা</p>
-                        <p class="text-[#5C5C5C]">999</p>
-                    </div>
-                    <div>
-                        <p>11:36:58 AM</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer>
+          </div>
+          <div class="flex gap-2 card-actions w-full justify-between p-0">
+            <button
+              class="copy-btn border-1 border-[#D4D6D5] flex-1 btn rounded-lg text-gray-600 hover:bg-gray-100 transition-colors duration-200"
+              data-number="999"
+            >
+              <i class="fa-regular fa-paste"></i> Copy
+            </button>
+            <button
+              class="call-btn flex-1 btn rounded-lg bg-[#00A63E] text-white hover:bg-green-700 transition-colors duration-200"
+              data-service-name="জাতীয় জরুরি সেবা"
+              data-service-number="999"
+            >
+              <i class="fa-solid fa-phone"></i> Call
+            </button>
+          </div>
+        </div>
 
-    </footer>
-</body>
+        <!-- Card 2: Police -->
+        <div
+          class="card bg-white gap-5 p-6 w-[330px] max-sm:w-full shadow-md rounded-xl"
+        >
+          <div class="flex justify-between">
+            <div class="bg-[#DFEFFF] p-2 rounded-xl">
+              <img
+                class="w-5 h-5"
+                src="./assets/police.png"
+                alt="Police-Icon"
+              />
+            </div>
+            <div>
+              <i
+                class="heart-btn fa-regular fa-heart text-gray-400 cursor-pointer transition-colors duration-200 hover:text-red-500"
+                data-service-id="999-police"
+              ></i>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-bold text-xl" data-service-name="পুলিশ">পুলিশ</h3>
+            <p class="text-[#5C5C5C]">Police</p>
+          </div>
+          <div>
+            <h3 class="font-bold text-2xl" data-service-number="999">999</h3>
+            <div
+              class="bg-[#F2F2F2] w-24 h-9 flex items-center justify-center rounded-2xl"
+            >
+              <p class="text-[#5C5C5C]">পুলিশ</p>
+            </div>
+          </div>
+          <div class="flex gap-2 card-actions w-full justify-between p-0">
+            <button
+              class="copy-btn border-1 border-[#D4D6D5] flex-1 btn rounded-lg text-gray-600 hover:bg-gray-100 transition-colors duration-200"
+              data-number="999"
+            >
+              <i class="fa-regular fa-paste"></i> Copy
+            </button>
+            <button
+              class="call-btn flex-1 btn rounded-lg bg-[#00A63E] text-white hover:bg-green-700 transition-colors duration-200"
+              data-service-name="পুলিশ"
+              data-service-number="999"
+            >
+              <i class="fa-solid fa-phone"></i> Call
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 3: Fire Service -->
+        <div
+          class="card bg-white gap-5 p-6 w-[330px] max-sm:w-full shadow-md rounded-xl"
+        >
+          <div class="flex justify-between">
+            <div class="bg-[#FFE3E2] p-2 rounded-xl">
+              <img
+                class="w-5 h-5"
+                src="./assets/fire-service.png"
+                alt="fire-service-icon"
+              />
+            </div>
+            <div>
+              <i
+                class="heart-btn fa-regular fa-heart text-gray-400 cursor-pointer transition-colors duration-200 hover:text-red-500"
+                data-service-id="999-fire"
+              ></i>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-bold text-xl" data-service-name="ফায়ার সার্ভিস">
+              ফায়ার সার্ভিস
+            </h3>
+            <p class="text-[#5C5C5C]">Fire Service</p>
+          </div>
+          <div>
+            <h3 class="font-bold text-2xl" data-service-number="999">999</h3>
+            <div
+              class="bg-[#F2F2F2] w-24 h-9 flex items-center justify-center rounded-2xl"
+            >
+              <p class="text-[#5C5C5C]">ফায়ার</p>
+            </div>
+          </div>
+          <div class="flex gap-2 card-actions w-full justify-between p-0">
+            <button
+              class="copy-btn border-1 border-[#D4D6D5] flex-1 btn rounded-lg text-gray-600 hover:bg-gray-100 transition-colors duration-200"
+              data-number="999"
+            >
+              <i class="fa-regular fa-paste"></i> Copy
+            </button>
+            <button
+              class="call-btn flex-1 btn rounded-lg bg-[#00A63E] text-white hover:bg-green-700 transition-colors duration-200"
+              data-service-name="ফায়ার সার্ভিস"
+              data-service-number="999"
+            >
+              <i class="fa-solid fa-phone"></i> Call
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 4: Ambulance -->
+        <div
+          class="card bg-white gap-5 p-6 w-[330px] max-sm:w-full shadow-md rounded-xl"
+        >
+          <div class="flex justify-between">
+            <div class="bg-[#FFE3E2] p-2 rounded-xl">
+              <img
+                class="w-5 h-5"
+                src="./assets/ambulance.png"
+                alt="Ambulance-Icon"
+              />
+            </div>
+            <div>
+              <i
+                class="heart-btn fa-regular fa-heart text-gray-400 cursor-pointer transition-colors duration-200 hover:text-red-500"
+                data-service-id="1994-ambulance"
+              ></i>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-bold text-xl" data-service-name="অ্যাম্বুলেন্স">
+              অ্যাম্বুলেন্স
+            </h3>
+            <p class="text-[#5C5C5C]">Ambulance</p>
+          </div>
+          <div>
+            <h3 class="font-bold text-2xl" data-service-number="1994-999999">
+              1994-999999
+            </h3>
+            <div
+              class="bg-[#F2F2F2] w-24 h-9 flex items-center justify-center rounded-2xl"
+            >
+              <p class="text-[#5C5C5C]">স্বাস্থ্য</p>
+            </div>
+          </div>
+          <div class="flex gap-2 card-actions w-full justify-between p-0">
+            <button
+              class="copy-btn border-1 border-[#D4D6D5] flex-1 btn rounded-lg text-gray-600 hover:bg-gray-100 transition-colors duration-200"
+              data-number="1994-999999"
+            >
+              <i class="fa-regular fa-paste"></i> Copy
+            </button>
+            <button
+              class="call-btn flex-1 btn rounded-lg bg-[#00A63E] text-white hover:bg-green-700 transition-colors duration-200"
+              data-service-name="অ্যাম্বুলেন্স"
+              data-service-number="1994-999999"
+            >
+              <i class="fa-solid fa-phone"></i> Call
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 5: Women & Child Helpline -->
+        <div
+          class="card bg-white gap-5 p-6 w-[330px] max-sm:w-full shadow-md rounded-xl"
+        >
+          <div class="flex justify-between">
+            <div class="bg-[#FFE3E2] p-2 rounded-xl">
+              <img
+                class="w-5 h-5"
+                src="./assets/emergency.png"
+                alt="Emergency-Icon"
+              />
+            </div>
+            <div>
+              <i
+                class="heart-btn fa-regular fa-heart text-gray-400 cursor-pointer transition-colors duration-200 hover:text-red-500"
+                data-service-id="109-child-helpline"
+              ></i>
+            </div>
+          </div>
+          <div>
+            <h3
+              class="font-bold text-xl"
+              data-service-name="নারী ও শিশু সহায়তা"
+            >
+              নারী ও শিশু সহায়তা
+            </h3>
+            <p class="text-[#5C5C5C]">Women & Child Helpline</p>
+          </div>
+          <div>
+            <h3 class="font-bold text-2xl" data-service-number="109">109</h3>
+            <div
+              class="bg-[#F2F2F2] w-24 h-9 flex items-center justify-center rounded-2xl"
+            >
+              <p class="text-[#5C5C5C]">সহায়তা</p>
+            </div>
+          </div>
+          <div class="flex gap-2 card-actions w-full justify-between p-0">
+            <button
+              class="copy-btn border-1 border-[#D4D6D5] flex-1 btn rounded-lg text-gray-600 hover:bg-gray-100 transition-colors duration-200"
+              data-number="109"
+            >
+              <i class="fa-regular fa-paste"></i> Copy
+            </button>
+            <button
+              class="call-btn flex-1 btn rounded-lg bg-[#00A63E] text-white hover:bg-green-700 transition-colors duration-200"
+              data-service-name="নারী ও শিশু সহায়তা"
+              data-service-number="109"
+            >
+              <i class="fa-solid fa-phone"></i> Call
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 6: Anti-Corruption -->
+        <div
+          class="card bg-white gap-5 p-6 w-[330px] max-sm:w-full shadow-md rounded-xl"
+        >
+          <div class="flex justify-between">
+            <div class="bg-[#FFE3E2] p-2 rounded-xl">
+              <img
+                class="w-5 h-5"
+                src="./assets/emergency.png"
+                alt="Emergency-Icon"
+              />
+            </div>
+            <div>
+              <i
+                class="heart-btn fa-regular fa-heart text-gray-400 cursor-pointer transition-colors duration-200 hover:text-red-500"
+                data-service-id="106-anti-corruption"
+              ></i>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-bold text-xl" data-service-name="দুদক">দুদক</h3>
+            <p class="text-[#5C5C5C]">Anti-Corruption</p>
+          </div>
+          <div>
+            <h3 class="font-bold text-2xl" data-service-number="106">106</h3>
+            <div
+              class="bg-[#F2F2F2] w-24 h-9 flex items-center justify-center rounded-2xl"
+            >
+              <p class="text-[#5C5C5C]">সরকারি</p>
+            </div>
+          </div>
+          <div class="flex gap-2 card-actions w-full justify-between p-0">
+            <button
+              class="copy-btn border-1 border-[#D4D6D5] flex-1 btn rounded-lg text-gray-600 hover:bg-gray-100 transition-colors duration-200"
+              data-number="106"
+            >
+              <i class="fa-regular fa-paste"></i> Copy
+            </button>
+            <button
+              class="call-btn flex-1 btn rounded-lg bg-[#00A63E] text-white hover:bg-green-700 transition-colors duration-200"
+              data-service-name="দুদক"
+              data-service-number="106"
+            >
+              <i class="fa-solid fa-phone"></i> Call
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 7: Electricity Outage -->
+        <div
+          class="card bg-white gap-5 p-6 w-[330px] max-sm:w-full shadow-md rounded-xl"
+        >
+          <div class="flex justify-between">
+            <div class="bg-[#FFE3E2] p-2 rounded-xl">
+              <img
+                class="w-5 h-5"
+                src="./assets/emergency.png"
+                alt="Emergency-Icon"
+              />
+            </div>
+            <div>
+              <i
+                class="heart-btn fa-regular fa-heart text-gray-400 cursor-pointer transition-colors duration-200 hover:text-red-500"
+                data-service-id="16216-electricity"
+              ></i>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-bold text-xl" data-service-name="বিদ্যুৎ বিভ্রাট">
+              বিদ্যুৎ বিভ্রাট
+            </h3>
+            <p class="text-[#5C5C5C]">Electricity Outage</p>
+          </div>
+          <div>
+            <h3 class="font-bold text-2xl" data-service-number="16216">
+              16216
+            </h3>
+            <div
+              class="bg-[#F2F2F2] w-24 h-9 flex items-center justify-center rounded-2xl"
+            >
+              <p class="text-[#5C5C5C]">বিদ্যুৎ</p>
+            </div>
+          </div>
+          <div class="flex gap-2 card-actions w-full justify-between p-0">
+            <button
+              class="copy-btn border-1 border-[#D4D6D5] flex-1 btn rounded-lg text-gray-600 hover:bg-gray-100 transition-colors duration-200"
+              data-number="16216"
+            >
+              <i class="fa-regular fa-paste"></i> Copy
+            </button>
+            <button
+              class="call-btn flex-1 btn rounded-lg bg-[#00A63E] text-white hover:bg-green-700 transition-colors duration-200"
+              data-service-name="বিদ্যুৎ বিভ্রাট"
+              data-service-number="16216"
+            >
+              <i class="fa-solid fa-phone"></i> Call
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 8: Brac -->
+        <div
+          class="card bg-white gap-5 p-6 w-[330px] max-sm:w-full shadow-md rounded-xl"
+        >
+          <div class="flex justify-between">
+            <div class="bg-[#FFE3E2] p-2 rounded-xl">
+              <img class="w-5 h-5" src="./assets/brac.png" alt="Brac-Icon" />
+            </div>
+            <div>
+              <i
+                class="heart-btn fa-regular fa-heart text-gray-400 cursor-pointer transition-colors duration-200 hover:text-red-500"
+                data-service-id="16445-brac"
+              ></i>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-bold text-xl" data-service-name="ব্র্যাক">
+              ব্র্যাক
+            </h3>
+            <p class="text-[#5C5C5C]">Brac</p>
+          </div>
+          <div>
+            <h3 class="font-bold text-2xl" data-service-number="16445">
+              16445
+            </h3>
+            <div
+              class="bg-[#F2F2F2] w-24 h-9 flex items-center justify-center rounded-2xl"
+            >
+              <p class="text-[#5C5C5C]">এনজিও</p>
+            </div>
+          </div>
+          <div class="flex gap-2 card-actions w-full justify-between p-0">
+            <button
+              class="copy-btn border-1 border-[#D4D6D5] flex-1 btn rounded-lg text-gray-600 hover:bg-gray-100 transition-colors duration-200"
+              data-number="16445"
+            >
+              <i class="fa-regular fa-paste"></i> Copy
+            </button>
+            <button
+              class="call-btn flex-1 btn rounded-lg bg-[#00A63E] text-white hover:bg-green-700 transition-colors duration-200"
+              data-service-name="ব্র্যাক"
+              data-service-number="16445"
+            >
+              <i class="fa-solid fa-phone"></i> Call
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 9: Bangladesh Railway -->
+        <div
+          class="card bg-white gap-5 p-6 w-[330px] max-sm:w-full shadow-md rounded-xl"
+        >
+          <div class="flex justify-between">
+            <div class="bg-[#FFE3E2] p-2 rounded-xl">
+              <img
+                class="w-5 h-5"
+                src="./assets/Bangladesh-Railway.png"
+                alt="Bangladesh-Railway-icon"
+              />
+            </div>
+            <div>
+              <i
+                class="heart-btn fa-regular fa-heart text-gray-400 cursor-pointer transition-colors duration-200 hover:text-red-500"
+                data-service-id="163-railway"
+              ></i>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-bold text-xl" data-service-name="বাংলাদেশ রেলওয়ে">
+              বাংলাদেশ রেলওয়ে
+            </h3>
+            <p class="text-[#5C5C5C]">Bangladesh Railway</p>
+          </div>
+          <div>
+            <h3 class="font-bold text-2xl" data-service-number="163">163</h3>
+            <div
+              class="bg-[#F2F2F2] w-24 h-9 flex items-center justify-center rounded-2xl"
+            >
+              <p class="text-[#5C5C5C]">পরিবহন</p>
+            </div>
+          </div>
+          <div class="flex gap-2 card-actions w-full justify-between p-0">
+            <button
+              class="copy-btn border-1 border-[#D4D6D5] flex-1 btn rounded-lg text-gray-600 hover:bg-gray-100 transition-colors duration-200"
+              data-number="163"
+            >
+              <i class="fa-regular fa-paste"></i> Copy
+            </button>
+            <button
+              class="call-btn flex-1 btn rounded-lg bg-[#00A63E] text-white hover:bg-green-700 transition-colors duration-200"
+              data-service-name="বাংলাদেশ রেলওয়ে"
+              data-service-number="163"
+            >
+              <i class="fa-solid fa-phone"></i> Call
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="w-1/4 max-sm:w-full bg-[#fff] flex flex-col gap-5 p-5 px-7 rounded-xl shadow-md"
+      >
+        <div class="flex justify-between items-center">
+          <div>
+            <p class="font-medium text-xl">
+              <i class="fa-regular fa-clock text-gray-400"></i> Call History
+            </p>
+          </div>
+          <button
+            id="clear-history-btn"
+            class="flex justify-center items-center gap-4 rounded-[50px] w-28 h-12 bg-[#00A63E] hover:bg-green-700 transition-colors duration-200"
+          >
+            <p class="font-normal text-lg text-white">Clear</p>
+          </button>
+        </div>
+        <div id="history-container" class="flex flex-col gap-2">
+          <!-- History items will be dynamically inserted here -->
+        </div>
+        <p id="no-history-message" class="text-center text-gray-400 mt-4"></p>
+      </section>
+
+      <!-- Custom Modal for Messages -->
+      <div
+        id="custom-modal"
+        class="modal fixed inset-0 flex items-center justify-center p-4 bg-gray-900 bg-opacity-50"
+      >
+        <div
+          class="modal-content bg-white p-6 rounded-xl max-w-sm w-full shadow-lg text-center"
+        >
+          <p
+            id="modal-message"
+            class="text-lg font-medium mb-4 text-gray-800"
+          ></p>
+          <button
+            id="modal-close-btn"
+            class="btn px-6 py-2 rounded-full bg-[#00A63E] text-white font-semibold hover:bg-green-700 transition-colors duration-200"
+          >
+            OK
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
 </html>
